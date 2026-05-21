@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { 
   Terminal as TerminalIcon, 
   ExternalLink, 
@@ -11,7 +11,9 @@ import {
   ShieldAlert, 
   Sparkles,
   ArrowRight,
-  Info
+  Info,
+  Volume2,
+  VolumeX
 } from "lucide-react"
 
 import { GooeyText } from "@/components/ui/gooey-text-morphing"
@@ -120,6 +122,19 @@ const PROJECTS = [
 export function App() {
   const [searchTerm, setSearchTerm] = useState("")
   const [activeCategory, setActiveCategory] = useState("all")
+  const [isPlaying, setIsPlaying] = useState(false)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
+
+  const toggleAudio = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause()
+      } else {
+        audioRef.current.play().catch(e => console.error("Audio playback failed:", e))
+      }
+      setIsPlaying(!isPlaying)
+    }
+  }
 
   // Format ID to clean display name
   const formatAgentName = (id: string) => {
@@ -175,6 +190,14 @@ export function App() {
             <a href="#terminal" className="text-muted-foreground hover:text-primary transition-colors py-1">/developer-shell</a>
           </nav>
           <div className="flex items-center gap-3">
+            <audio ref={audioRef} src="/bg-music.mp3" loop />
+            <button 
+              onClick={toggleAudio}
+              className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-primary transition-all duration-200"
+              aria-label="Toggle Background Music"
+            >
+              {isPlaying ? <Volume2 className="h-4 w-4" /> : <VolumeX className="h-4 w-4 text-muted-foreground" />}
+            </button>
             <a 
               href="https://github.com/gitsuraj07" 
               target="_blank" 
