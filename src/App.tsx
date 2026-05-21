@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef } from "react"
 import { 
   Terminal as TerminalIcon, 
   ExternalLink, 
@@ -11,6 +11,7 @@ import {
   ShieldAlert, 
   Sparkles,
   ArrowRight,
+  ArrowUp,
   Info,
   Volume2,
   VolumeX
@@ -136,6 +137,10 @@ export function App() {
     }
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
   // Format ID to clean display name
   const formatAgentName = (id: string) => {
     return id.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")
@@ -234,15 +239,15 @@ export function App() {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-display font-extrabold tracking-tight leading-[1.1] text-foreground">
-              Designing Tools.
+              Exploring Ideas.
               <br />
-              Coding Systems.
+              Prototyping Software.
             </h1>
 
             {/* GooeyText morpher wrapper */}
             <div className="h-[75px] md:h-[95px] flex items-center justify-start py-2">
               <GooeyText 
-                texts={["Self-Taught Builder", "MEXT IP Applicant", "Product Explorer", "Tool Developer"]}
+                texts={["Self-Taught Student", "MEXT Applicant", "Curious Learner", "Idea Prototyper"]}
                 morphTime={1.2}
                 cooldownTime={0.8}
                 className="justify-start text-left w-full"
@@ -251,7 +256,7 @@ export function App() {
             </div>
 
             <p className="text-muted-foreground text-base md:text-lg max-w-lg leading-relaxed font-body">
-              I am a Class 12 student building digital tools through active coding, testing, and system experimentation. Rather than following textbook definitions, I build interfaces, canvas logic, and agent scripts to verify how software solves problems.
+              I am an 18-year-old student using modern AI-assisted workflows to explore software development and turn practical ideas into working prototypes. By experimenting with real code, I'm actively learning how to build and iterate on digital projects before starting my formal university education.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
@@ -278,13 +283,13 @@ export function App() {
             </h2>
             <div className="space-y-4 font-body text-sm leading-relaxed text-muted-foreground">
               <p>
-                <strong className="text-foreground">Practical Learning Philosophy:</strong> I learn by creating, breaking, and improving software. Facing bugs in actual project pipelines teaches debugging and optimization rules much faster than passive theory.
+                <strong className="text-foreground">Self-Driven Learning:</strong> I learn by building and prototyping ideas. Using modern AI tools as an accelerator, I experiment with code, tackle real bugs, and figure out how to put applications together through active iteration.
               </p>
               <p>
-                <strong className="text-foreground">Information Processing Interest:</strong> Applying for the MEXT scholarship, I aim to dive deep into computer science principles, algorithm design, and system architectures to build high-performance products.
+                <strong className="text-foreground">MEXT Scholarship Goal:</strong> While I enjoy exploring independently, I want to deeply understand the fundamentals of computer science and system design through structured, formal education in Japan to unlock my true potential.
               </p>
               <p>
-                <strong className="text-foreground">Core Competencies:</strong> Node execution, React UI components, browser canvas physics, custom layout configurations, and simulated developer agents.
+                <strong className="text-foreground">Current Explorations:</strong> Experimenting with React interfaces, basic browser canvas logic, web layouts, and integrating developer agents into my problem-solving workflow.
               </p>
             </div>
           </div>
@@ -476,6 +481,15 @@ export function App() {
           </div>
 
           <TerminalConsole />
+
+          <div className="flex justify-center pt-8">
+            <button 
+              onClick={scrollToTop}
+              className="inline-flex items-center gap-2 bg-[#151619] hover:bg-primary/20 text-muted-foreground hover:text-primary font-code text-xs px-5 py-2.5 rounded-full border border-white/5 transition-all duration-300 group"
+            >
+              <ArrowUp className="h-4 w-4 group-hover:-translate-y-1 transition-transform" /> Back to top
+            </button>
+          </div>
         </section>
 
       </main>
