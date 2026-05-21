@@ -204,7 +204,7 @@ export function App() {
               {isPlaying ? <Volume2 className="h-4 w-4" /> : <VolumeX className="h-4 w-4 text-muted-foreground" />}
             </button>
             <a 
-              href="https://github.com/gitsuraj07" 
+              href="https://github.com/gitsuraj7" 
               target="_blank" 
               rel="noreferrer"
               className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-muted-foreground hover:text-foreground transition-all duration-200"
@@ -507,7 +507,7 @@ export function App() {
           © {new Date().getFullYear()} Suraj Das. All rights reserved.
         </div>
         <div className="flex items-center gap-6">
-          <a href="https://github.com/gitsuraj07" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">GitHub</a>
+          <a href="https://github.com/gitsuraj7" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">GitHub</a>
           <a href="https://www.linkedin.com/in/suraj-das-5801793aa" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">LinkedIn</a>
           <a href="mailto:itzzs.business@gmail.com" className="hover:text-primary transition-colors">Contact / Email</a>
         </div>
