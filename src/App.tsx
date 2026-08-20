@@ -14,7 +14,12 @@ import {
   ArrowUp,
   Info,
   Volume2,
-  VolumeX
+  VolumeX,
+  GraduationCap,
+  Award,
+  BookOpen,
+  Phone,
+  UserCheck
 } from "lucide-react"
 
 import { GooeyText } from "@/components/ui/gooey-text-morphing"
@@ -190,6 +195,7 @@ export function App() {
           </a>
           <nav className="hidden sm:flex items-center gap-8 text-sm font-code">
             <a href="#about" className="text-muted-foreground hover:text-primary transition-colors py-1">/about</a>
+            <a href="#education" className="text-muted-foreground hover:text-primary transition-colors py-1">/education</a>
             <a href="#projects" className="text-muted-foreground hover:text-primary transition-colors py-1">/projects</a>
             <a href="#team" className="text-muted-foreground hover:text-primary transition-colors py-1">/agents-team</a>
             <a href="#terminal" className="text-muted-foreground hover:text-primary transition-colors py-1">/developer-shell</a>
@@ -291,6 +297,165 @@ export function App() {
               <p>
                 <strong className="text-foreground">Current Explorations:</strong> Experimenting with React interfaces, basic browser canvas logic, web layouts, and integrating developer agents into my problem-solving workflow.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Education & Academic Performance Section */}
+        <section id="education" className="space-y-12 scroll-mt-24">
+          <div className="space-y-2">
+            <span className="font-code text-xs text-primary uppercase tracking-widest">// academic record & learning approach</span>
+            <h2 className="text-2xl md:text-3xl font-display font-extrabold tracking-tight text-foreground">
+              Education & Academic Performance
+            </h2>
+            <p className="text-muted-foreground text-sm max-w-xl">
+              Schooling history, academic milestones, practical learning workflow, and verified faculty recommendations.
+            </p>
+          </div>
+
+          {/* Education Timeline / Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-[#151619] rounded-xl p-6 border border-white/5 space-y-4 hover:border-primary/20 transition-all duration-300 relative group shadow-lg">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-code text-primary bg-primary/10 px-2 py-0.5 rounded border border-primary/20">
+                  2024 – 2026
+                </span>
+                <GraduationCap className="h-5 w-5 text-primary/80" />
+              </div>
+              <div>
+                <h3 className="font-display font-bold text-base text-foreground group-hover:text-primary transition-colors">
+                  Senior Secondary (Class 11–12)
+                </h3>
+                <p className="text-xs text-muted-foreground font-code mt-0.5">
+                  Serampore Vivekananda Academy
+                </p>
+              </div>
+              <div className="space-y-2 text-xs text-muted-foreground font-body pt-2 border-t border-white/5">
+                <p>
+                  <strong className="text-foreground">Science Stream:</strong> Mathematics, Physics, Chemistry, Biology, English, Physical Education.
+                </p>
+                <p className="text-primary font-semibold font-code bg-primary/5 p-2 rounded border border-primary/10">
+                  Academic Score: Achieved 75% Aggregate Score in Higher Secondary Class 12 Boards.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-[#151619] rounded-xl p-6 border border-white/5 space-y-4 hover:border-primary/20 transition-all duration-300 relative group shadow-lg">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-code text-primary bg-primary/10 px-2 py-0.5 rounded border border-primary/20">
+                  2022 – 2024
+                </span>
+                <Award className="h-5 w-5 text-primary/80" />
+              </div>
+              <div>
+                <h3 className="font-display font-bold text-base text-foreground group-hover:text-primary transition-colors">
+                  Secondary (Class 9–10)
+                </h3>
+                <p className="text-xs text-muted-foreground font-code mt-0.5">
+                  Serampore Vivekananda Academy
+                </p>
+              </div>
+              <div className="space-y-2 text-xs text-muted-foreground font-body pt-2 border-t border-white/5">
+                <p className="text-primary font-semibold font-code bg-primary/5 p-2 rounded border border-primary/10">
+                  Academic Score: Achieved 89% Overall Aggregate on Class 10 Board Examinations.
+                </p>
+                <p className="text-foreground font-medium flex items-center gap-1.5 pt-1">
+                  <Sparkles className="h-3.5 w-3.5 text-primary shrink-0" />
+                  <strong>Mathematics Award:</strong> Recognized as Class Subject Topper in Mathematics.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-[#151619] rounded-xl p-6 border border-white/5 space-y-4 hover:border-primary/20 transition-all duration-300 relative group shadow-lg">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-code text-primary bg-primary/10 px-2 py-0.5 rounded border border-primary/20">
+                  2014 – 2022
+                </span>
+                <BookOpen className="h-5 w-5 text-primary/80" />
+              </div>
+              <div>
+                <h3 className="font-display font-bold text-base text-foreground group-hover:text-primary transition-colors">
+                  Primary & Middle School (Class 1–8)
+                </h3>
+                <p className="text-xs text-muted-foreground font-code mt-0.5">
+                  Baidyabati Sacred Heart
+                </p>
+              </div>
+              <div className="space-y-2 text-xs text-muted-foreground font-body pt-2 border-t border-white/5">
+                <p>
+                  <strong className="text-foreground">Medium of Instruction:</strong> 100% English Medium schooling completed continuously from Class 1 through Class 12.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Practical Workflow & Learning Approach */}
+          <div className="bg-[#151619] rounded-xl p-8 border border-white/5 space-y-6">
+            <h3 className="font-display font-bold text-lg text-foreground flex items-center gap-2.5">
+              <span className="w-1.5 h-5 bg-primary rounded-full" />
+              Practical Workflow & Learning Approach
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="p-4 rounded-lg bg-[#0b0c0e]/60 border border-white/5 space-y-2">
+                <div className="text-primary font-code text-xs font-semibold flex items-center gap-1.5">
+                  <Cpu className="h-4 w-4" /> AI-Assisted Building
+                </div>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Use modern AI tools (Cursor, Claude, ChatGPT) to generate starter code, structure web layouts, debug errors, and turn ideas into working applications quickly.
+                </p>
+              </div>
+              <div className="p-4 rounded-lg bg-[#0b0c0e]/60 border border-white/5 space-y-2">
+                <div className="text-primary font-code text-xs font-semibold flex items-center gap-1.5">
+                  <Code className="h-4 w-4" /> Applied Physics & Math
+                </div>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Apply classroom geometry, trigonometry, and vector principles to build interactive 2D graphics, game loops, bounce angles, and surface friction models.
+                </p>
+              </div>
+              <div className="p-4 rounded-lg bg-[#0b0c0e]/60 border border-white/5 space-y-2">
+                <div className="text-primary font-code text-xs font-semibold flex items-center gap-1.5">
+                  <ExternalLink className="h-4 w-4" /> Web Hosting & Deployment
+                </div>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Deploy self-built projects live on the internet using hosting services like Vercel and Firebase so they can be viewed online.
+                </p>
+              </div>
+              <div className="p-4 rounded-lg bg-[#0b0c0e]/60 border border-white/5 space-y-2">
+                <div className="text-primary font-code text-xs font-semibold flex items-center gap-1.5">
+                  <Layers className="h-4 w-4" /> Code Tracking
+                </div>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Organize, update, and publish project source code publicly on GitHub to track version history and build a transparent portfolio.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Academic References & Recommendations */}
+          <div className="space-y-4">
+            <h3 className="font-display font-bold text-lg text-foreground flex items-center gap-2.5">
+              <UserCheck className="h-5 w-5 text-primary" />
+              Academic References & Recommendations
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { name: "Mr. Sarbajit", dept: "Mathematics Faculty", phone: "+91 98318 85664" },
+                { name: "Mr. Sadashiv", dept: "Physics Faculty", phone: "+91 80134 36054" },
+                { name: "Mrs. Ananna", dept: "Chemistry Faculty", phone: "+91 80170 87317" },
+                { name: "Mr. Jisu", dept: "English Faculty", phone: "+91 80171 96649" }
+              ].map((ref, idx) => (
+                <div key={idx} className="bg-[#151619] rounded-xl p-5 border border-white/5 hover:border-primary/20 transition-all space-y-3">
+                  <div>
+                    <h4 className="font-display font-bold text-sm text-foreground">{ref.name}</h4>
+                    <p className="text-xs text-primary font-code">{ref.dept}</p>
+                  </div>
+                  <div className="pt-2 border-t border-white/5 flex items-center justify-between text-xs text-muted-foreground font-code">
+                    <span className="flex items-center gap-1.5">
+                      <Phone className="h-3.5 w-3.5 text-primary/80" /> {ref.phone}
+                    </span>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>

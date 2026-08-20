@@ -72,11 +72,28 @@ export function TerminalConsole() {
           { type: "output", text: "Available commands:" },
           { type: "output", text: "  help        - Display this menu" },
           { type: "output", text: "  about       - Details about Suraj Das (background & application)" },
+          { type: "output", text: "  education   - Academic performance & faculty recommendations" },
           { type: "output", text: "  projects    - List independent projects with links" },
           { type: "output", text: "  agents      - List autonomous developer agents and their roles" },
           { type: "output", text: "  open <name> - Open agent drawer by name (e.g. 'open seo-specialist')" },
           { type: "output", text: "  orchestrate <prompt> - Simulate the agents collaborating on a task" },
           { type: "output", text: "  clear       - Clear screen history" }
+        ])
+        break
+
+      case "education":
+      case "academics":
+        setHistory(prev => [
+          ...prev,
+          { type: "output", text: "EDUCATION & ACADEMIC PERFORMANCE:" },
+          { type: "output", text: "  • Class 11–12 (Senior Secondary): 75% Aggregate (Science Stream) | Serampore Vivekananda Academy" },
+          { type: "output", text: "  • Class 9–10  (Secondary): 89% Overall Aggregate | Subject Topper in Mathematics" },
+          { type: "output", text: "  • Class 1–8   (Primary & Middle): 100% English Medium | Baidyabati Sacred Heart" },
+          { type: "output", text: "FACULTY RECOMMENDATIONS & REFERENCES:" },
+          { type: "output", text: "  • Mr. Sarbajit (Mathematics) - +91 98318 85664" },
+          { type: "output", text: "  • Mr. Sadashiv (Physics)     - +91 80134 36054" },
+          { type: "output", text: "  • Mrs. Ananna  (Chemistry)   - +91 80170 87317" },
+          { type: "output", text: "  • Mr. Jisu     (English)     - +91 80171 96649" }
         ])
         break
 
